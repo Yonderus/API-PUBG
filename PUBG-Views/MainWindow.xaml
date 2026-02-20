@@ -1,0 +1,101 @@
+﻿<Window x:Class="TuProyecto.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:PUBG_Views.Controls"
+        Title="PUBG Mini App"
+        Height="780"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#F6F8FB">
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top bar -->
+        <Border Grid.Row="0" Background="White" CornerRadius="14" Padding="14" BorderBrush="#E6EAF0" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="TxtNombre"
+                         Height="42"
+                         FontSize="14"
+                         Padding="12,9"
+                         VerticalContentAlignment="Center"
+                         BorderBrush="#D7DDE6"
+                         Background="#FBFCFE"
+                         Text=""/>
+
+                <Button x:Name="BtnBuscar"
+                        Grid.Column="1"
+                        Height="42"
+                        Margin="12,0,0,0"
+                        Padding="18,0"
+                        Background="#0F172A"
+                        Foreground="White"
+                        BorderBrush="#0F172A"
+                        Click="BtnBuscar_Click"
+                        Content="Buscar"/>
+            </Grid>
+        </Border>
+
+        <!-- Main content -->
+        <Grid Grid.Row="1" Margin="0,14,0,14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="420"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left panel -->
+            <StackPanel Grid.Column="0">
+                <controls:PlayerCardControl x:Name="PlayerCard" Margin="0,0,0,14"/>
+
+                <Border Background="White" CornerRadius="14" Padding="12" BorderBrush="#E6EAF0" BorderThickness="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Últimas partidas"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="#0F172A"
+                                   Margin="2,0,0,10"/>
+
+                        <ListBox x:Name="ListaMatches"
+                                 Grid.Row="1"
+                                 BorderThickness="0"
+                                 SelectionChanged="ListaMatches_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#FBFCFE" CornerRadius="10" Padding="10" Margin="0,0,0,10" BorderBrush="#E6EAF0" BorderThickness="1">
+                                        <TextBlock Text="{Binding}" FontFamily="Consolas" FontSize="12" Foreground="#0F172A"/>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <!-- Right panel -->
+            <controls:MatchDetailControl x:Name="MatchDetail" Grid.Column="2"/>
+        </Grid>
+
+        <!-- Status -->
+        <TextBlock x:Name="TxtEstado"
+                   Grid.Row="2"
+                   Text=""
+                   Foreground="#334155"
+                   FontSize="12"
+                   Margin="6,0,0,0"/>
+    </Grid>
+</Window>
