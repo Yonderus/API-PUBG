@@ -1,207 +1,263 @@
-# 🎮 API-PUBG
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/Yonderus/API-PUBG?style=for-the-badge)](https://github.com/Yonderus/API-PUBG/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Yonderus/API-PUBG?style=for-the-badge)](https://github.com/Yonderus/API-PUBG/network)
-[![GitHub issues](https://img.shields.io/github/issues/Yonderus/API-PUBG?style=for-the-badge)](https://github.com/Yonderus/API-PUBG/issues)
+# 🎮 API-PUBG
 
-**A C# ASP.NET Core API for interacting with PUBG game data.**
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=4000&pause=1000&color=F75C03&center=true&vCenter=true&width=600&lines=PUBG+Data+API;ASP.NET+Core+Backend;Game+Statistics+%26+Analytics" alt="Typing SVG" />
+
+[![GitHub stars](https://img.shields.io/github/stars/Yonderus/API-PUBG?style=for-the-badge&logo=github&color=yellow)](https://github.com/Yonderus/API-PUBG/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Yonderus/API-PUBG?style=for-the-badge&logo=github&color=blue)](https://github.com/Yonderus/API-PUBG/network)
+[![GitHub issues](https://img.shields.io/github/issues/Yonderus/API-PUBG?style=for-the-badge&logo=github&color=red)](https://github.com/Yonderus/API-PUBG/issues)
+[![License](https://img.shields.io/github/license/Yonderus/API-PUBG?style=for-the-badge)](LICENSE)
+
+### 🚀 A powerful C# ASP.NET Core API for PUBG game data integration
+
+[Características](#-características) •
+[Instalación](#-instalación) •
+[Uso](#-uso) •
+[Arquitectura](#-arquitectura) •
+[Contribuir](#-contribuir)
 
 </div>
 
-## 📖 Overview
+---
 
-This project provides a robust backend service developed with C# and ASP.NET Core, designed to serve and manage data related to the game PlayerUnknown's Battlegrounds (PUBG). It offers a structured way to access game statistics, player profiles, match data, and potentially other game-related information, making it an ideal foundation for building companion apps, analytical tools, or web interfaces.
+## 📖 Descripción
 
-The architecture follows a modular approach with distinct layers for controllers, models, services, and views, promoting maintainability and scalability.
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18&height=100&section=header&animation=fadeIn" width="100%"/>
+</div>
 
-## ✨ Features
+**API-PUBG** es un servicio backend robusto desarrollado con **C#** y **ASP.NET Core**, diseñado para servir y gestionar datos relacionados con PlayerUnknown's Battlegrounds (PUBG). Proporciona una forma estructurada de acceder a estadísticas de juego, perfiles de jugadores, datos de partidas y otra información relacionada con el juego.
 
--   🎯 **PUBG Data Integration**: Seamlessly interact with and process game data.
--   🌐 **RESTful API Endpoints**: Expose game data through a clean and well-defined API.
--   💾 **Data Modeling**: Structured data models for PUBG entities like players, matches, and statistics.
--   ⚙️ **Service-Oriented Logic**: Encapsulated business logic within dedicated service layers.
--   🔄 **Extensible Architecture**: Designed for easy expansion with additional game data or functionalities.
+Ideal para:
+- 📊 Herramientas de análisis de datos
+- 🎯 Aplicaciones companion
+- 🌐 Interfaces web personalizadas
+- 📈 Dashboards de estadísticas
+
+---
+
+## ✨ Características
+
+<details open>
+<summary><b>Ver todas las características</b></summary>
+<br>
+
+| Característica | Descripción |
+|:---:|:---|
+| 🎯 | **Integración PUBG**: Interacción fluida con datos del juego |
+| 🌐 | **API RESTful**: Endpoints limpios y bien definidos |
+| 💾 | **Modelos de Datos**: Estructuras para jugadores, partidas y estadísticas |
+| ⚙️ | **Lógica de Servicios**: Capa de negocio encapsulada y mantenible |
+| 🔄 | **Arquitectura Extensible**: Fácil expansión de funcionalidades |
+| 🛡️ | **Type-Safe**: Aprovecha el tipado fuerte de C# |
+| ⚡ | **Alto Rendimiento**: Optimizado con ASP.NET Core |
+| 📦 | **Modular**: Separación clara de responsabilidades |
+
+</details>
+
+---
 
 ## 🛠️ Tech Stack
 
-**Backend:**
-[![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
-[![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+<div align="center">
 
-**Package Management:**
-[![NuGet](https://img.shields.io/badge/NuGet-004880?style=for-the-badge&logo=nuget&logoColor=white)](https://www.nuget.org/)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![NuGet](https://img.shields.io/badge/NuGet-004880?style=for-the-badge&logo=nuget&logoColor=white)
 
-**Database:**
-<!-- TODO: Detect and add database technologies (e.g., Entity Framework Core, SQL Server, PostgreSQL, SQLite) -->
--   [To be detected from project files]
+</div>
 
-## 🚀 Quick Start
+---
 
-Follow these steps to get the API up and running on your local machine.
+## 🚀 Instalación
 
-### Prerequisites
--   [.NET SDK](https://dotnet.microsoft.com/download) (Version 8.0 or newer recommended)
--   [Visual Studio](https://visualstudio.microsoft.com/vs/) or a compatible C# IDE (e.g., VS Code with C# extension)
+### Prerrequisitos
 
-### Installation
+```bash
+✅ .NET SDK 8.0 o superior
+✅ Visual Studio 2022 / VS Code / Rider
+✅ Git
+```
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/Yonderus/API-PUBG.git
-    cd API-PUBG
-    ```
+### Pasos de Instalación
 
-2.  **Restore NuGet dependencies**
-    Open the `API PUBG.sln` file in Visual Studio, and it will automatically restore the packages, or run:
-    ```bash
-    dotnet restore
-    ```
+<details open>
+<summary><b>1️⃣ Clonar el repositorio</b></summary>
 
-3.  **Environment setup**
-    Configuration settings for the API are typically managed via `appsettings.json` and environment variables.
-    -   Examine `appsettings.json` (and `appsettings.Development.json`) files within the project directories for configurable settings.
-    -   Environment variables can override `appsettings.json` values. Common variables include:
-        -   `ASPNETCORE_ENVIRONMENT`: Set to `Development` for development features (e.g., detailed error pages).
-        -   <!-- TODO: List any specific environment variables detected in appsettings.json or code -->
+```bash
+git clone https://github.com/Yonderus/API-PUBG.git
+cd API-PUBG
+```
+</details>
 
-4.  **Database setup** (if applicable)
-    If the project utilizes a database with Entity Framework Core migrations, you might need to apply them:
-    ```bash
-    # Navigate to the project directory containing the .csproj file and DbContext
-    # cd PUBG-Model # Or relevant project
-    # dotnet ef database update
-    ```
-    <!-- TODO: Confirm database usage and add specific commands if EF Core is used -->
+<details>
+<summary><b>2️⃣ Restaurar dependencias</b></summary>
 
-5.  **Build the project**
-    ```bash
-    dotnet build
-    ```
+```bash
+dotnet restore
+```
+</details>
 
-6.  **Start the API**
-    ```bash
-    dotnet run --project "API PUBG.sln"
-    ```
-    Alternatively, open `API PUBG.sln` in Visual Studio and run it directly.
+<details>
+<summary><b>3️⃣ Configurar variables de entorno</b></summary>
 
-7.  **Access the API**
-    The API will typically run on `http://localhost:5000` or `http://localhost:5001` (HTTPS) by default.
-    You can usually access the Swagger UI (if configured) at `http://localhost:5001/swagger` for documentation and testing.
-    <!-- TODO: Verify default port and swagger endpoint from code if available -->
+```bash
+# Crear archivo appsettings.json con tu configuración
+cp appsettings.example.json appsettings.json
+```
+</details>
 
-## 📁 Project Structure
+<details>
+<summary><b>4️⃣ Compilar el proyecto</b></summary>
+
+```bash
+dotnet build
+```
+</details>
+
+<details>
+<summary><b>5️⃣ Ejecutar la aplicación</b></summary>
+
+```bash
+dotnet run
+```
+</details>
+
+---
+
+## 🎯 Uso
+
+### Ejemplo de Petición API
+
+```csharp
+// GET: api/players/{playerName}
+GET https://localhost:5001/api/players/YONDERUS
+```
+
+### Respuesta Esperada
+
+```json
+{
+  "playerId": "12345",
+  "playerName": "YONDERUS",
+  "stats": {
+    "kills": 150,
+    "deaths": 75,
+    "wins": 20,
+    "kd_ratio": 2.0
+  }
+}
+```
+
+---
+
+## 🏗️ Arquitectura
+
+<div align="center">
+
+```mermaid
+graph TB
+    A[👤 Cliente] -->|HTTP Request| B[🎮 PUBG-Controller]
+    B --> C[⚙️ PUBG-Services]
+    C --> D[💾 PUBG-Model]
+    C --> E[🌐 API Externa PUBG]
+    D --> F[(📊 Base de Datos)]
+    B --> G[👁️ PUBG-Views]
+    
+    style A fill:#e1f5ff
+    style B fill:#ffe1e1
+    style C fill:#fff4e1
+    style D fill:#e1ffe1
+    style E fill:#f0e1ff
+    style F fill:#ffe1f0
+    style G fill:#e1ffff
+```
+
+</div>
+
+### Estructura del Proyecto
 
 ```
 API-PUBG/
-├── .gitattributes         # Git configuration for attribute assignment
-├── .gitignore             # Files and directories to ignore in Git
-├── API PUBG.sln           # Visual Studio Solution file
-├── PUBG-Controller/       # ASP.NET Core Controllers (API endpoints)
-│   └── ...
-├── PUBG-Model/            # Data Models (Entities, DTOs) and potentially DbContext
-│   └── ...
-├── PUBG-Services/         # Business Logic, Data Access Layer, External Service Integrations
-│   └── ...
-└── PUBG-Views/            # (Potentially) Server-side rendered views, if this is an MVC app
-    └── ...
+├── 📁 PUBG-Controller/     # Controladores de API (Endpoints)
+├── 📁 PUBG-Model/          # Modelos de datos y entidades
+├── 📁 PUBG-Services/       # Lógica de negocio y servicios
+├── 📁 PUBG-Views/          # Vistas y DTOs
+├── 📄 API PUBG.sln         # Archivo de solución
+└── 📄 README.md            # Este archivo
 ```
 
-## ⚙️ Configuration
+---
 
-### Application Settings
-Key configuration is managed through `appsettings.json` files.
--   `appsettings.json`: Base configuration applied to all environments.
--   `appsettings.Development.json`: Overrides for the development environment.
--   `appsettings.Production.json`: Overrides for the production environment.
+## 🤝 Contribuir
 
-These files can contain database connection strings, API keys, and other critical settings.
+<div align="center">
 
-### Environment Variables
-Environment variables can override values specified in `appsettings.json`. This is common for sensitive data like API keys or database credentials in production deployments.
+Las contribuciones son **bienvenidas** y **apreciadas** 🎉
 
-## 🔧 Development
+</div>
 
-### Available Commands
--   `dotnet restore`: Restores the dependencies of the project.
--   `dotnet build`: Compiles the project.
--   `dotnet run`: Builds and runs the application.
--   `dotnet watch run`: Builds and runs the application, and restarts it when file changes are detected. This is very useful for development.
--   <!-- TODO: Add any other custom `dotnet` commands or project-specific scripts if detected -->
+### Proceso de Contribución
 
-### Development Workflow
-For development, it's recommended to use `dotnet watch run` to automatically restart the server on code changes. Visual Studio's built-in debugger also provides a seamless development experience.
+1. 🍴 Fork el proyecto
+2. 🌿 Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. 💾 Commit tus cambios (`git commit -m 'Add: nueva característica increíble'`)
+4. 📤 Push a la Branch (`git push origin feature/AmazingFeature`)
+5. 🔀 Abre un Pull Request
 
-## 🧪 Testing
+### Convenciones de Commits
 
-<!-- TODO: If test projects are found (e.g., PUBG-Controller.Tests), describe testing setup (xUnit, NUnit, MSTest) and commands. -->
-If unit or integration tests are present, they can typically be run using:
-```bash
-# Run all tests in the solution
-dotnet test "API PUBG.sln"
-
-# Run tests within a specific test project
-# cd PUBG-Controller.Tests/ # Example
-# dotnet test
+```
+feat: Nueva característica
+fix: Corrección de bug
+docs: Cambios en documentación
+style: Formato, punto y coma faltantes, etc
+refactor: Refactorización de código
+test: Añadir tests
+chore: Actualizar tareas de build, configuración, etc
 ```
 
-## 🚀 Deployment
+---
 
-### Production Build
-To create a production-ready build of the application:
-```bash
-dotnet publish -c Release -o ./publish
-```
-This command compiles the application and its dependencies into a folder named `publish`, ready for deployment.
+## 📊 Estadísticas del Proyecto
 
-### Deployment Options
--   **IIS/Kestrel**: The output from `dotnet publish` can be deployed to an IIS server or run directly using Kestrel.
--   **Docker**: A `Dockerfile` could be added to containerize the application for easier deployment to platforms like Kubernetes or Azure Container Apps.
--   **Cloud Platforms**: Deploy directly to Azure App Service, AWS Elastic Beanstalk, Google Cloud Run, or other cloud providers that support .NET applications.
+<div align="center">
 
-## 📚 API Reference
+![GitHub language count](https://img.shields.io/github/languages/count/Yonderus/API-PUBG?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/Yonderus/API-PUBG?style=flat-square)
+![GitHub code size](https://img.shields.io/github/languages/code-size/Yonderus/API-PUBG?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Yonderus/API-PUBG?style=flat-square)
 
-The API exposes endpoints to interact with various PUBG-related data. A detailed API reference will be generated and available through Swagger UI when the application is running.
+</div>
 
-### Base URL
-`http://localhost:[Port]/api` (during local development)
+---
 
-### Endpoints (Examples)
--   `GET /api/players/{playerId}`: Retrieve details for a specific player.
--   `GET /api/players/{playerId}/matches`: Get match history for a player.
--   `GET /api/matches/{matchId}`: Retrieve details for a specific match.
--   `GET /api/leaderboards/{region}`: Access regional leaderboards.
--   <!-- TODO: Based on the actual controllers in PUBG-Controller, list real API endpoints -->
+## 📝 Licencia
 
-## 🤝 Contributing
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-We welcome contributions to the API-PUBG project! If you're interested in improving the API, please consider:
+---
 
-1.  Forking the repository.
-2.  Creating a new branch for your feature or bug fix (`git checkout -b feature/your-feature-name`).
-3.  Making your changes and committing them (`git commit -m 'feat: Add new feature'`).
-4.  Pushing your branch (`git push origin feature/your-feature-name`).
-5.  Opening a Pull Request.
+## 👨‍💻 Autor
 
-Please ensure your code adheres to the project's coding standards and includes relevant tests.
+<div align="center">
 
-## 🙏 Acknowledgments
+**Yonderus**
 
--   Built with the powerful [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet) framework.
--   Special thanks to the open-source community for the invaluable tools and libraries.
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Yonderus)
 
-## 📞 Support & Contact
-
--   🐛 Issues: [GitHub Issues](https://github.com/Yonderus/API-PUBG/issues)
+</div>
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo if you find it helpful!**
+### ⭐ Si te gustó este proyecto, considera darle una estrella!
 
-Made with ❤️ by [Yonderus](https://github.com/Yonderus)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18&height=100&section=footer" width="100%"/>
+
+**Hecho con ❤️ y C#**
 
 </div>
