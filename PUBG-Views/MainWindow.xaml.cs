@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using TuProyecto.Controllers;
 using TuProyecto.Services;
+using System.Configuration;
 
 namespace TuProyecto.Views
 {
@@ -41,9 +42,17 @@ namespace TuProyecto.Views
         {
             InitializeComponent();
 
+            string apiKey = ConfigurationManager.AppSettings["PUBG_API_KEY"];
+
+            if (string.IsNullOrWhiteSpace(apiKey))
+            {
+                MessageBox.Show("No se ha configurado la API Key en App.config");
+                Application.Current.Shutdown();
+                return;
+            }
             // Crear el cliente de la API.
             // IMPORTANTE: el token debe estar limpio (sin \r\n al final) o el header Authorization se rompe.
-            var api = new PubgApiCliente(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwMDg5MDA1MC1kNzhlLTAxM2UtNTIwZC0wYWQ2YjhkZjQ2OGYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNzY4ODQ1MzQ1LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImNvbmV4aW9uLWFwaSJ9.nufXY8_Wqm5Aft874cOOxLHPZPYuhQkk4TSUWJmuc3s");
+            var api = new PubgApiCliente(apiKey.Trim());
 
             // Inyección manual del servicio en el controller.
             controlador = new JugadorController(api);

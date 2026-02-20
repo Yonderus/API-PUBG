@@ -56,7 +56,12 @@ namespace TuProyecto.Services
         public PubgApiCliente(string apiKey)
         {
             // Guardar el token tal cual. Si contiene \r\n al final, se romperá el header Authorization.
-            this.apiKey = apiKey;
+            this.apiKey = (apiKey ?? "").Trim();
+
+            if (string.IsNullOrWhiteSpace(this.apiKey))
+            {
+                throw new ArgumentException("API Key inválida.");
+            }
         }
 
         /// <summary>
@@ -100,12 +105,6 @@ namespace TuProyecto.Services
                     {
                         // Normalmente significa API key inválida o sin permisos.
                         throw new Exception($"No autorizado. Revisa la API Key.\n\n{body}");
-                    }
-
-                    if ((int)resp.StatusCode == 429)
-                    {
-                        // PUBG limita el número de requests por tiempo.
-                        throw new Exception($"Rate limit alcanzado.\n\n{body}");
                     }
 
                     if ((int)resp.StatusCode >= 500)
