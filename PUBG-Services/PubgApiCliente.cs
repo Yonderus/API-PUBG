@@ -1,10 +1,11 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Caching;
+using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace TuProyecto.Services
 {
@@ -150,6 +151,9 @@ namespace TuProyecto.Services
         /// <param name="ct">Token de cancelación.</param>
         public async Task<T> GetAsync<T>(string url, string claveCache, TimeSpan duracion, CancellationToken ct)
         {
+            //Antes de pedir a PUBG, miras si ya lo pediste antes
+            //Si existe, devuelves directamente el objeto guardado
+            //Si no existe, pides a la API, conviertes a DTO y lo guardas un tiempo
             // 1) Intento rápido: caché.
             var objCache = cache.Get(claveCache);
             if (objCache is T cached)
