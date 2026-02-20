@@ -5,5 +5,76 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
+        <SolidColorBrush x:Key="PubgBg" Color="#1B1D1C"/>
+        <SolidColorBrush x:Key="PubgSurface" Color="#232725"/>
+        <SolidColorBrush x:Key="PubgSurfaceAlt" Color="#2A2E2C"/>
+        <SolidColorBrush x:Key="PubgBorder" Color="#3A3F3D"/>
+        <SolidColorBrush x:Key="PubgText" Color="#F5F5F5"/>
+        <SolidColorBrush x:Key="PubgMuted" Color="#C7C7C7"/>
+        <SolidColorBrush x:Key="PubgAccent" Color="#F5A000"/>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="{StaticResource PubgText}"/>
+            <Setter Property="Background" Value="{StaticResource PubgSurfaceAlt}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PubgBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CaretBrush" Value="{StaticResource PubgAccent}"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PubgAccent}"/>
+            <Setter Property="Foreground" Value="#1B1D1C"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PubgAccent}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFB300"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="ItemBorder"
+                                Background="{StaticResource PubgSurfaceAlt}"
+                                BorderBrush="{StaticResource PubgBorder}"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Padding="10"
+                                Margin="0,0,0,10">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource PubgAccent}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="ItemBorder" Property="BorderBrush" Value="{StaticResource PubgAccent}"/>
+                                <Setter TargetName="ItemBorder" Property="Background" Value="#313734"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

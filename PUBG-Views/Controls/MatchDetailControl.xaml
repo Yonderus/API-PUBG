@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="700">
 
-    <Border Background="White" CornerRadius="14" Padding="14" BorderBrush="#E6EAF0" BorderThickness="1">
+    <Border Background="{StaticResource PubgSurface}" CornerRadius="14" Padding="14" BorderBrush="{StaticResource PubgBorder}" BorderThickness="1">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -16,32 +16,32 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Detalle de match" FontSize="14" FontWeight="SemiBold" Foreground="#0F172A"/>
+            <TextBlock Text="Detalle de match" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource PubgText}"/>
 
-            <TextBlock x:Name="TxtStatus" Grid.Row="1" Text="Selecciona un match" Foreground="#64748B" Margin="0,6,0,0"/>
+            <TextBlock x:Name="TxtStatus" Grid.Row="1" Text="Selecciona un match" Foreground="{StaticResource PubgMuted}" Margin="0,6,0,0"/>
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,14,0,0">
-                <TextBlock Text="ID: " Foreground="#334155"/>
-                <TextBlock x:Name="TxtMatchId" Text="-" Foreground="#0F172A" FontFamily="Consolas"/>
+                <TextBlock Text="ID: " Foreground="{StaticResource PubgMuted}"/>
+                <TextBlock x:Name="TxtMatchId" Text="-" Foreground="{StaticResource PubgText}" FontFamily="Consolas"/>
             </StackPanel>
 
             <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,6,0,0">
-                <TextBlock Text="Mapa: " Foreground="#334155"/>
-                <TextBlock x:Name="TxtMap" Text="-" Foreground="#0F172A"/>
+                <TextBlock Text="Mapa: " Foreground="{StaticResource PubgMuted}"/>
+                <TextBlock x:Name="TxtMap" Text="-" Foreground="{StaticResource PubgText}"/>
             </StackPanel>
 
             <StackPanel Grid.Row="4" Margin="0,14,0,0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Modo: " Foreground="#334155"/>
-                    <TextBlock x:Name="TxtMode" Text="-" Foreground="#0F172A"/>
+                    <TextBlock Text="Modo: " Foreground="{StaticResource PubgMuted}"/>
+                    <TextBlock x:Name="TxtMode" Text="-" Foreground="{StaticResource PubgText}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
-                    <TextBlock Text="Duracion: " Foreground="#334155"/>
-                    <TextBlock x:Name="TxtDuration" Text="-" Foreground="#0F172A"/>
+                    <TextBlock Text="Duracion: " Foreground="{StaticResource PubgMuted}"/>
+                    <TextBlock x:Name="TxtDuration" Text="-" Foreground="{StaticResource PubgText}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
-                    <TextBlock Text="Iniciado: " Foreground="#334155"/>
-                    <TextBlock x:Name="TxtCreated" Text="-" Foreground="#0F172A"/>
+                    <TextBlock Text="Iniciado: " Foreground="{StaticResource PubgMuted}"/>
+                    <TextBlock x:Name="TxtCreated" Text="-" Foreground="{StaticResource PubgText}"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

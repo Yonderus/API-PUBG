@@ -6,11 +6,11 @@
              mc:Ignorable="d"
              d:DesignHeight="120" d:DesignWidth="400">
 
-    <Border Background="White" CornerRadius="14" Padding="14" BorderBrush="#E6EAF0" BorderThickness="1">
+    <Border Background="{StaticResource PubgSurface}" CornerRadius="14" Padding="14" BorderBrush="{StaticResource PubgBorder}" BorderThickness="1">
         <StackPanel>
-            <TextBlock Text="Jugador" Foreground="#64748B" FontSize="12"/>
-            <TextBlock x:Name="TxtNombre" Text="-" Foreground="#0F172A" FontWeight="SemiBold" FontSize="18" Margin="0,4,0,0"/>
-            <TextBlock x:Name="TxtId" Text="" Foreground="#334155" FontFamily="Consolas" FontSize="12" Margin="0,8,0,0"/>
+            <TextBlock Text="Jugador" Foreground="{StaticResource PubgMuted}" FontSize="12"/>
+            <TextBlock x:Name="TxtNombre" Text="-" Foreground="{StaticResource PubgText}" FontWeight="SemiBold" FontSize="18" Margin="0,4,0,0"/>
+            <TextBlock x:Name="TxtId" Text="" Foreground="{StaticResource PubgMuted}" FontFamily="Consolas" FontSize="12" Margin="0,8,0,0"/>
         </StackPanel>
     </Border>
 </UserControl>
